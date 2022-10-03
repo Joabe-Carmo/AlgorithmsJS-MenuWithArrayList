@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    let option
+    let itens = []
+    
+    while(option != 3){
+      option = Number(prompt(`Olá usuário! Digite o número da opção desejada: 
+  
+      1 - Cadastrar um item na lista
+      2 - Mostrar itens cadastrados
+      3 - Sair do programa`))
+  
+      //alert('Opção ' + option + ' digitada')
+      
+      /* if(option == 1){
+        let item = prompt('Digite um item da lista')
+        itens.push(item)
+      }else if(option == 2){
+        if(itens.length == 0){
+          alert('Não existem itens cadastrados')
+        }else{
+          alert(itens)
+        }
+      }else if(option != 1 && option != 2){
+        alert('Digite uma das opçoes oferecidas')
+      } */
+      switch (option) {
+        case 1:
+          let item = prompt('Digite um item da lista')
+          itens.push(item)
+          break;
+        case 2:
+        if(itens.length == 0){
+            alert('Não existem itens cadastrados')
+          }else{
+            alert(itens)
+          }
+          break;
+        case 3:
+          alert('Goodbye')
+          break
+        default:
+            alert('Opção inválida. Tente novamente.')
+      }
+    }  
+  </script>
+</body>
+</html>
